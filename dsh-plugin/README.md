@@ -20,10 +20,22 @@ Install the `terminal-notifier` CLI globally from the repository root:
 npm install -g ./terminal-notifier
 ```
 
-dsh must run on a machine with a desktop (for remote/headless dsh, set
-`command` in the patch row to an `ssh`-relay wrapper instead).
+### Platforms
 
-### Headless host with an RDP session
+The plugin is platform-agnostic: it spawns the configured `command` and
+reads its exit code (0 = Yes, 1 = No — the same contract on every OS).
+The `terminal-notifier` CLI delivers per platform:
+
+- **macOS** — notifications and dialogs via osascript; works out of the box.
+- **Windows** — native toast notifications and Yes/No MessageBox dialogs
+  via PowerShell; works out of the box.
+- **Linux** — needs `notify-send` (notifications) and `zenity` (dialogs).
+
+On macOS and Windows the default `command: terminal-notifier` is all you
+need when dsh runs on that desktop. The Linux-specific helpers below only
+apply when dsh runs on a headless Linux server.
+
+### Linux: headless host with an RDP session
 
 If dsh runs on a headless server that you access via xrdp/XFCE, install
 [`terminal-notifier-session.sh`](terminal-notifier-session.sh) as

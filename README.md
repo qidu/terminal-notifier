@@ -104,14 +104,17 @@ For DeepSeek Harness, a plugin bundle ships in [dsh-plugin/](dsh-plugin/):
 it notifies when an agent turn completes and — unlike the other
 integrations — can *answer* dsh's approval requests with the Yes/No dialog
 (YES approves once, NO rejects; on failure or timeout it defers to the
-Web UI). Install:
+Web UI). The plugin is platform-agnostic and works wherever dsh runs on a
+desktop — macOS, Windows, or Linux (via the
+[terminal-notifier](README.md#install) CLI). Install:
 
 ```
 dsh plugin --profile <name> add ./dsh-plugin
 ```
 
-Requires dsh running on a machine with a desktop (e.g. locally on macOS).
-See [dsh-plugin/README.md](dsh-plugin/README.md) for configuration.
+For headless Linux servers accessed over xrdp/RDP, a session-discovery
+wrapper is included. See [dsh-plugin/README.md](dsh-plugin/README.md) for
+configuration.
 
 ## Development
 
