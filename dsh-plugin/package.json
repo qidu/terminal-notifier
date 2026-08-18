@@ -1,0 +1,22 @@
+{
+  "name": "dsh-terminal-notifier",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DeepSeek Harness (dsh) plugin: desktop notifications on turn completion, and Yes/No dialog answers for approval requests, via the terminal-notifier CLI.",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification"
+  ],
+  "license": "MIT"
+}

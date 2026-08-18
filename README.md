@@ -98,6 +98,21 @@ notify = ["sh", "/path/to/terminal-notifier/codex/notify.sh"]
 
 See [codex/README.md](codex/README.md) for details.
 
+## DeepSeek Harness (dsh) plugin
+
+For DeepSeek Harness, a plugin bundle ships in [dsh-plugin/](dsh-plugin/):
+it notifies when an agent turn completes and — unlike the other
+integrations — can *answer* dsh's approval requests with the Yes/No dialog
+(YES approves once, NO rejects; on failure or timeout it defers to the
+Web UI). Install:
+
+```
+dsh plugin --profile <name> add ./dsh-plugin
+```
+
+Requires dsh running on a machine with a desktop (e.g. locally on macOS).
+See [dsh-plugin/README.md](dsh-plugin/README.md) for configuration.
+
 ## Development
 
 ```
