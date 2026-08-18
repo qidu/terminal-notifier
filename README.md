@@ -65,6 +65,20 @@ const yes = await ask('Deploy to production?', { title: 'Build' }); // true/fals
 
 The promises reject if the notification or dialog cannot be shown.
 
+## Claude Code plugin
+
+A companion Claude Code plugin ships in [plugin/](plugin/): it shows a
+Yes/No dialog when Claude needs a decision and adds a `/notify` command.
+See [plugin/README.md](plugin/README.md) for installation:
+
+```
+# Register this repository as a plugin marketplace
+claude plugin marketplace add ./terminal-notifier
+
+# Install the plugin from that marketplace (plugin@marketplace, not npm)
+claude plugin install terminal-notifier@terminal-notifier
+```
+
 ## Development
 
 ```
