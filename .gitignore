@@ -1,8 +1,4 @@
 .*.sw?
 .DS_Store
-DerivedData
-xcuserdata
-Ruby/*.zip
-Ruby/*.gem
-Ruby/vendor
-build
+node_modules/
+dist/
