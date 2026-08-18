@@ -10,7 +10,7 @@
     {
       "name": "terminal-notifier",
       "source": "./plugin",
-      "description": "Desktop notifications for Claude Code: Yes/No dialog when Claude needs a decision, plus a /notify command.",
+      "description": "Desktop notifications for Claude Code: Yes/No dialog when Claude needs a decision, plus a /terminal-notifier:notify command.",
       "version": "1.0.0"
     }
   ]

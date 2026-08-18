@@ -1,7 +1,7 @@
 # terminal-notifier plugin for Claude Code
 
 Sends desktop notifications (macOS, Linux, Windows) for Claude Code events,
-and adds a `/notify` command for on-demand notifications and Yes/No dialogs.
+and adds a `/terminal-notifier:notify` command for on-demand notifications and Yes/No dialogs.
 
 ## What it does
 
@@ -9,8 +9,17 @@ and adds a `/notify` command for on-demand notifications and Yes/No dialogs.
   whenever Claude needs a decision, permission, or input. The dialog shows
   the event's message; Yes/No dismisses it (the answer is informational and
   does not control Claude).
-- **/notify command** — ask Claude to send a notification, or a blocking
+- **/terminal-notifier:notify command** — ask Claude to send a notification, or a blocking
   Yes/No dialog (`terminal-notifier -ask`) whose answer Claude uses directly.
+
+### Limitations
+
+The dialog is an additional asking channel, not a replacement for Claude
+Code's native prompts: it cannot answer permission prompts (those must go
+through Claude Code's own UI), it is Yes/No only (AskUserQuestion supports
+multiple options), and it must be answered within the Bash tool timeout
+(~10 minutes). It is best suited for binary decisions when the user may
+be away from the terminal.
 
 ## Prerequisites
 
@@ -70,4 +79,4 @@ the hook is loaded.
 1. Run any Claude Code session from a directory using this plugin.
 2. When Claude finishes responding, you should get a notification titled
    "Claude".
-3. Ask Claude to "notify me: done" to exercise the `/notify` command.
+3. Ask Claude to "notify me: done" to exercise the `/terminal-notifier:notify` command.

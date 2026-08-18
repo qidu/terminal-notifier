@@ -68,7 +68,15 @@ The promises reject if the notification or dialog cannot be shown.
 ## Claude Code plugin
 
 A companion Claude Code plugin ships in [plugin/](plugin/): it shows a
-Yes/No dialog when Claude needs a decision and adds a `/notify` command.
+Yes/No dialog when Claude needs a decision and adds a `/terminal-notifier:notify` command.
+
+The dialog is an *additional* asking channel, not a replacement for
+Claude Code's native prompts: it cannot answer permission prompts (those
+must go through Claude Code's own UI), it is Yes/No only (native prompts
+support multiple options), and it must be answered within the Bash tool
+timeout (~10 minutes). It is best suited for binary decisions when the
+user may be away from the terminal.
+
 See [plugin/README.md](plugin/README.md) for installation:
 
 ```
@@ -78,6 +86,17 @@ claude plugin marketplace add ./terminal-notifier
 # Install the plugin from that marketplace (plugin@marketplace, not npm)
 claude plugin install terminal-notifier@terminal-notifier
 ```
+
+## Codex CLI integration
+
+For the OpenAI Codex CLI, a `notify` hook script ships in
+[codex/](codex/) — add to `~/.codex/config.toml`:
+
+```toml
+notify = ["sh", "/path/to/terminal-notifier/codex/notify.sh"]
+```
+
+See [codex/README.md](codex/README.md) for details.
 
 ## Development
 
