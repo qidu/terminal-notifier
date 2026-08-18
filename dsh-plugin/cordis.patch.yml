@@ -1,0 +1,14 @@
+- insert:
+    - id: terminal-notifier
+      name: dsh-terminal-notifier
+      config:
+        # Binary to invoke (must be on PATH). Use a full path to a checkout,
+        # or an ssh relay command wrapper for remote/headless hosts.
+        command: terminal-notifier
+        sound: default
+        # Pop a Yes/No dialog for approval requests; YES approves once,
+        # NO rejects. Falls through to other answerers (e.g. the Web UI)
+        # when the dialog fails, times out, or this is false.
+        askApprovals: true
+        # Seconds to wait for the dialog before falling through.
+        askTimeout: 120

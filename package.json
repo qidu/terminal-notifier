@@ -1,0 +1,42 @@
+{
+  "name": "terminal-notifier-node",
+  "version": "1.0.0",
+  "description": "Cross-platform desktop notifications with plugins for Claude Code, Codex CLI, and DeepSeek Harness on macOS, Linux, and Windows",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "terminal-notifier": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test \"test/*.test.ts\""
+  },
+  "keywords": [
+    "notification",
+    "notifier",
+    "terminal",
+    "macos",
+    "linux",
+    "windows"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/julienXX/terminal-notifier"
+  },
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/node-notifier": "^8.0.5",
+    "typescript": "^5.5.0"
+  }
+}

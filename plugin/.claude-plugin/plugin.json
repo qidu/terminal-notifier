@@ -1,0 +1,5 @@
+{
+  "name": "terminal-notifier",
+  "version": "1.0.0",
+  "description": "Desktop notifications for Claude Code: notifies when a response finishes and when Claude needs your attention. Adds a /terminal-notifier:notify command for on-demand notifications and yes/no dialogs."
+}

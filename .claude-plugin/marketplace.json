@@ -1,0 +1,17 @@
+{
+  "name": "terminal-notifier",
+  "metadata": {
+    "description": "Cross-platform desktop notifications for Claude Code (macOS, Linux, Windows)"
+  },
+  "owner": {
+    "name": "sudu"
+  },
+  "plugins": [
+    {
+      "name": "terminal-notifier",
+      "source": "./plugin",
+      "description": "Desktop notifications for Claude Code: Yes/No dialog when Claude needs a decision, plus a /terminal-notifier:notify command.",
+      "version": "1.0.0"
+    }
+  ]
+}
