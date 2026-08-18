@@ -1,7 +1,7 @@
 {
-  "name": "terminal-notifier",
+  "name": "terminal-notifier-node",
   "version": "1.0.0",
-  "description": "Cross-platform command-line tool and API to send desktop notifications (macOS, Linux, Windows)",
+  "description": "Cross-platform desktop notifications with plugins for Claude Code, Codex CLI, and DeepSeek Harness on macOS, Linux, and Windows",
   "license": "MIT",
   "type": "module",
   "bin": {

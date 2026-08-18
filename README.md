@@ -10,7 +10,7 @@ osascript on macOS, `notify-send` on Linux, and native toasts on Windows.
 ## Install
 
 ```
-$ npm install -g terminal-notifier
+$ npm install -g terminal-notifier-node
 ```
 
 Linux requires `notify-send` (usually in the `libnotify` or `libnotify-bin`
@@ -57,7 +57,7 @@ to stderr. For `-ask`, exit code `0` means Yes and `1` means No.
 ## API Usage
 
 ```js
-import { notify, ask } from 'terminal-notifier';
+import { notify, ask } from 'terminal-notifier-node';
 
 await notify('Hello World', { title: 'Build', sound: 'default' });
 const yes = await ask('Deploy to production?', { title: 'Build' }); // true/false
