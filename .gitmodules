@@ -1,0 +1,3 @@
+[submodule "submodules/node-notifier"]
+	path = submodules/node-notifier
+	url = https://github.com/mikaelbr/node-notifier.git
