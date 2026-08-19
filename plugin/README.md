@@ -9,6 +9,8 @@ and adds a `/terminal-notifier:notify` command for on-demand notifications and Y
   whenever Claude needs a decision, permission, or input. The dialog shows
   the event's message; Yes/No dismisses it (the answer is informational and
   does not control Claude).
+- **TaskCompleted hook** — shows a desktop notification whenever Claude
+  marks a task in its task list as completed.
 - **/terminal-notifier:notify command** — ask Claude to send a notification, or a blocking
   Yes/No dialog (`terminal-notifier -ask`) whose answer Claude uses directly.
 
@@ -77,6 +79,9 @@ the hook is loaded.
 ## Verify
 
 1. Run any Claude Code session from a directory using this plugin.
-2. When Claude finishes responding, you should get a notification titled
-   "Claude".
+2. When Claude needs a decision or permission (e.g. a permission prompt
+   appears), you should get a Yes/No dialog titled "Claude".
+3. When Claude marks a task in its task list completed, you should get a
+   notification titled "Claude".
+4. Ask Claude to "notify me: done" to exercise the `/terminal-notifier:notify` command.
 3. Ask Claude to "notify me: done" to exercise the `/terminal-notifier:notify` command.
